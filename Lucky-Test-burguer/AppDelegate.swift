@@ -14,7 +14,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, willFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
         if #available(iOS 13.0, *) {} else {
             let window = UIWindow(frame: UIScreen.main.bounds)
-            let home = HomeViewController(nibName: "HomeViewController", bundle: nil)
+            let viewModel = HomeViewModel()
+            let home = HomeViewController(viewModel: viewModel)
             let controller = UINavigationController(rootViewController: home)
             self.window = window
             self.window?.rootViewController = controller
