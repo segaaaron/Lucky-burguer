@@ -11,6 +11,39 @@ final class HomeViewModel: NSObject {
     private let service = Network()
     var filterResult: Observable<BurguerModel> = Observable(BurguerModel(title: "", sections: []))
     
+    
+    var nameCell: String {
+        Text.cellIdentifier
+    }
+    
+    var countSectionList: Int {
+        if let count = filterResult.value?.sections?.count {
+            return count
+        }
+        return 0
+    }
+    
+    func titleSection(index: Int) -> Section {
+        if let model = filterResult.value?.sections?[index] {
+            return model
+        }
+        return Section()
+    }
+    
+    func titleItemSection(section: Int, index: Int) -> Item {
+        if let model = filterResult.value?.sections?[section].items?[index] {
+            return model
+        }
+        return Item()
+    }
+    
+    func currentCounterSectionList(index: Int) -> Int {
+        if let count = filterResult.value?.sections?[index].items?.count {
+            return count
+        }
+        return 0
+    }
+    
     func loadService() {
         service.apiService(with: .GET,
                            model: BurguerModel.self,

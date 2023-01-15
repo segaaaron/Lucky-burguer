@@ -17,6 +17,8 @@
 		EE44A09029747C3F000A9E8F /* BurguerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE44A08F29747C3F000A9E8F /* BurguerModel.swift */; };
 		EE44A09329747F41000A9E8F /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE44A09229747F41000A9E8F /* HomeViewModel.swift */; };
 		EE44A09529748088000A9E8F /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE44A09429748088000A9E8F /* Observable.swift */; };
+		EE44A09A29748CE9000A9E8F /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE44A09829748CE9000A9E8F /* ListCell.swift */; };
+		EE44A09B29748CE9000A9E8F /* ListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE44A09929748CE9000A9E8F /* ListCell.xib */; };
 		EE746E4E2974605200E0BEBF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE746E4C2974605200E0BEBF /* HomeViewController.swift */; };
 		EE746E4F2974605200E0BEBF /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE746E4D2974605200E0BEBF /* HomeViewController.xib */; };
 		EE746E5229746B6300E0BEBF /* Color+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE746E5129746B6300E0BEBF /* Color+extension.swift */; };
@@ -57,6 +59,8 @@
 		EE44A08F29747C3F000A9E8F /* BurguerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurguerModel.swift; sourceTree = "<group>"; };
 		EE44A09229747F41000A9E8F /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		EE44A09429748088000A9E8F /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		EE44A09829748CE9000A9E8F /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
+		EE44A09929748CE9000A9E8F /* ListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListCell.xib; sourceTree = "<group>"; };
 		EE746E4C2974605200E0BEBF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		EE746E4D2974605200E0BEBF /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		EE746E5129746B6300E0BEBF /* Color+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+extension.swift"; sourceTree = "<group>"; };
@@ -125,19 +129,37 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		EE746E492974601C00E0BEBF /* Modulo */ = {
+		EE44A09629748C68000A9E8F /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				EE44A09129747F2B000A9E8F /* ViewModel */,
 				EE44A08E29747C12000A9E8F /* Model */,
 				EE746E4B2974603600E0BEBF /* View */,
+				EE44A09129747F2B000A9E8F /* ViewModel */,
 			);
-			path = Modulo;
+			path = Home;
+			sourceTree = "<group>";
+		};
+		EE44A09729748CCE000A9E8F /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				EE44A09829748CE9000A9E8F /* ListCell.swift */,
+				EE44A09929748CE9000A9E8F /* ListCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		EE746E492974601C00E0BEBF /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				EE44A09629748C68000A9E8F /* Home */,
+			);
+			path = Module;
 			sourceTree = "<group>";
 		};
 		EE746E4B2974603600E0BEBF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				EE44A09729748CCE000A9E8F /* Cell */,
 				EE746E4C2974605200E0BEBF /* HomeViewController.swift */,
 				EE746E4D2974605200E0BEBF /* HomeViewController.xib */,
 			);
@@ -180,7 +202,7 @@
 			children = (
 				EE44A08329747447000A9E8F /* Network */,
 				EE746E5029746B3D00E0BEBF /* Helper */,
-				EE746E492974601C00E0BEBF /* Modulo */,
+				EE746E492974601C00E0BEBF /* Module */,
 				EEF75E8229743F520062FD82 /* AppDelegate.swift */,
 				EEF75E8429743F520062FD82 /* SceneDelegate.swift */,
 				EEF75E8B29743F560062FD82 /* Assets.xcassets */,
@@ -316,6 +338,7 @@
 				EEF75E8C29743F560062FD82 /* Assets.xcassets in Resources */,
 				EE44A08D29747B23000A9E8F /* ServiceUrl.plist in Resources */,
 				EE746E4F2974605200E0BEBF /* HomeViewController.xib in Resources */,
+				EE44A09B29748CE9000A9E8F /* ListCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,6 +366,7 @@
 				EE44A09529748088000A9E8F /* Observable.swift in Sources */,
 				EE44A08B2974773F000A9E8F /* ServiceError.swift in Sources */,
 				EE44A0822974714E000A9E8F /* NameSpace+Text.swift in Sources */,
+				EE44A09A29748CE9000A9E8F /* ListCell.swift in Sources */,
 				EE44A08929747626000A9E8F /* EndPoints.swift in Sources */,
 				EE44A08729747606000A9E8F /* RequestService.swift in Sources */,
 				EEF75E8329743F520062FD82 /* AppDelegate.swift in Sources */,
