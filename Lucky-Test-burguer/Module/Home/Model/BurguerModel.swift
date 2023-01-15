@@ -17,6 +17,11 @@ struct BurguerModel: Codable {
 struct Section: Codable {
     let title: String?
     let items: [Item]?
+    
+    init(title: String? = nil, items: [Item]? = nil) {
+        self.title = title
+        self.items = items
+    }
 }
 
 // MARK: - Item
@@ -30,5 +35,19 @@ struct Item: Codable {
         case detailURL = "detailUrl"
         case imageURL = "imageUrl"
         case brand, title, tags, favoriteCount
+    }
+    
+    init(detailURL: String? = nil,
+         imageURL: String? = nil,
+         brand: String? = nil,
+         title: String? = nil,
+         tags: String? = nil,
+         favoriteCount: Int? = nil) {
+        self.detailURL = detailURL
+        self.imageURL = imageURL
+        self.brand = brand
+        self.title = title
+        self.tags = tags
+        self.favoriteCount = favoriteCount
     }
 }

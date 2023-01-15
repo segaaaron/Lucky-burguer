@@ -19,5 +19,6 @@ extension Namespace {
     enum Text {
         /// App common title. Value is `Title`.
         static let hometitle = "Title"
+        static let cellIdentifier = "ListCell"
     }
 }
