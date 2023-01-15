@@ -7,10 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE44A080297470F1000A9E8F /* NameSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE44A07F297470F1000A9E8F /* NameSpace.swift */; };
+		EE44A0822974714E000A9E8F /* NameSpace+Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE44A0812974714E000A9E8F /* NameSpace+Text.swift */; };
+		EE746E4E2974605200E0BEBF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE746E4C2974605200E0BEBF /* HomeViewController.swift */; };
+		EE746E4F2974605200E0BEBF /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE746E4D2974605200E0BEBF /* HomeViewController.xib */; };
+		EE746E5229746B6300E0BEBF /* Color+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE746E5129746B6300E0BEBF /* Color+extension.swift */; };
 		EEF75E8329743F520062FD82 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF75E8229743F520062FD82 /* AppDelegate.swift */; };
 		EEF75E8529743F520062FD82 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF75E8429743F520062FD82 /* SceneDelegate.swift */; };
-		EEF75E8729743F520062FD82 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF75E8629743F520062FD82 /* ViewController.swift */; };
-		EEF75E8A29743F520062FD82 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEF75E8829743F520062FD82 /* Main.storyboard */; };
 		EEF75E8C29743F560062FD82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEF75E8B29743F560062FD82 /* Assets.xcassets */; };
 		EEF75E8F29743F560062FD82 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEF75E8D29743F560062FD82 /* LaunchScreen.storyboard */; };
 		EEF75E9A29743F560062FD82 /* Lucky_Test_burguerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF75E9929743F560062FD82 /* Lucky_Test_burguerTests.swift */; };
@@ -36,11 +39,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EE44A07F297470F1000A9E8F /* NameSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameSpace.swift; sourceTree = "<group>"; };
+		EE44A0812974714E000A9E8F /* NameSpace+Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NameSpace+Text.swift"; sourceTree = "<group>"; };
+		EE746E4C2974605200E0BEBF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		EE746E4D2974605200E0BEBF /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		EE746E5129746B6300E0BEBF /* Color+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+extension.swift"; sourceTree = "<group>"; };
 		EEF75E7F29743F520062FD82 /* Lucky-Test-burguer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lucky-Test-burguer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEF75E8229743F520062FD82 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EEF75E8429743F520062FD82 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EEF75E8629743F520062FD82 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		EEF75E8929743F520062FD82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EEF75E8B29743F560062FD82 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EEF75E8E29743F560062FD82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EEF75E9029743F560062FD82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -76,6 +82,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EE746E492974601C00E0BEBF /* Modulo */ = {
+			isa = PBXGroup;
+			children = (
+				EE746E4B2974603600E0BEBF /* View */,
+			);
+			path = Modulo;
+			sourceTree = "<group>";
+		};
+		EE746E4B2974603600E0BEBF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EE746E4C2974605200E0BEBF /* HomeViewController.swift */,
+				EE746E4D2974605200E0BEBF /* HomeViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EE746E5029746B3D00E0BEBF /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				EE746E5129746B6300E0BEBF /* Color+extension.swift */,
+				EE44A07F297470F1000A9E8F /* NameSpace.swift */,
+				EE44A0812974714E000A9E8F /* NameSpace+Text.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		EEF75E7629743F520062FD82 = {
 			isa = PBXGroup;
 			children = (
@@ -99,10 +132,10 @@
 		EEF75E8129743F520062FD82 /* Lucky-Test-burguer */ = {
 			isa = PBXGroup;
 			children = (
+				EE746E5029746B3D00E0BEBF /* Helper */,
+				EE746E492974601C00E0BEBF /* Modulo */,
 				EEF75E8229743F520062FD82 /* AppDelegate.swift */,
 				EEF75E8429743F520062FD82 /* SceneDelegate.swift */,
-				EEF75E8629743F520062FD82 /* ViewController.swift */,
-				EEF75E8829743F520062FD82 /* Main.storyboard */,
 				EEF75E8B29743F560062FD82 /* Assets.xcassets */,
 				EEF75E8D29743F560062FD82 /* LaunchScreen.storyboard */,
 				EEF75E9029743F560062FD82 /* Info.plist */,
@@ -233,7 +266,7 @@
 			files = (
 				EEF75E8F29743F560062FD82 /* LaunchScreen.storyboard in Resources */,
 				EEF75E8C29743F560062FD82 /* Assets.xcassets in Resources */,
-				EEF75E8A29743F520062FD82 /* Main.storyboard in Resources */,
+				EE746E4F2974605200E0BEBF /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +291,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EEF75E8729743F520062FD82 /* ViewController.swift in Sources */,
+				EE44A0822974714E000A9E8F /* NameSpace+Text.swift in Sources */,
 				EEF75E8329743F520062FD82 /* AppDelegate.swift in Sources */,
 				EEF75E8529743F520062FD82 /* SceneDelegate.swift in Sources */,
+				EE746E4E2974605200E0BEBF /* HomeViewController.swift in Sources */,
+				EE44A080297470F1000A9E8F /* NameSpace.swift in Sources */,
+				EE746E5229746B6300E0BEBF /* Color+extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +333,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		EEF75E8829743F520062FD82 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EEF75E8929743F520062FD82 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		EEF75E8D29743F560062FD82 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -435,14 +463,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 65KF46T6RU;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Lucky-Test-burguer/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -452,6 +480,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "gotIdea.com.Lucky-Test-burguer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -463,14 +492,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 65KF46T6RU;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Lucky-Test-burguer/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -480,6 +509,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "gotIdea.com.Lucky-Test-burguer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
