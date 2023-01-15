@@ -9,6 +9,14 @@
 /* Begin PBXBuildFile section */
 		EE44A080297470F1000A9E8F /* NameSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE44A07F297470F1000A9E8F /* NameSpace.swift */; };
 		EE44A0822974714E000A9E8F /* NameSpace+Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE44A0812974714E000A9E8F /* NameSpace+Text.swift */; };
+		EE44A085297475A8000A9E8F /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE44A084297475A8000A9E8F /* Network.swift */; };
+		EE44A08729747606000A9E8F /* RequestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE44A08629747606000A9E8F /* RequestService.swift */; };
+		EE44A08929747626000A9E8F /* EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE44A08829747626000A9E8F /* EndPoints.swift */; };
+		EE44A08B2974773F000A9E8F /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE44A08A2974773F000A9E8F /* ServiceError.swift */; };
+		EE44A08D29747B23000A9E8F /* ServiceUrl.plist in Resources */ = {isa = PBXBuildFile; fileRef = EE44A08C29747B23000A9E8F /* ServiceUrl.plist */; };
+		EE44A09029747C3F000A9E8F /* BurguerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE44A08F29747C3F000A9E8F /* BurguerModel.swift */; };
+		EE44A09329747F41000A9E8F /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE44A09229747F41000A9E8F /* HomeViewModel.swift */; };
+		EE44A09529748088000A9E8F /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE44A09429748088000A9E8F /* Observable.swift */; };
 		EE746E4E2974605200E0BEBF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE746E4C2974605200E0BEBF /* HomeViewController.swift */; };
 		EE746E4F2974605200E0BEBF /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE746E4D2974605200E0BEBF /* HomeViewController.xib */; };
 		EE746E5229746B6300E0BEBF /* Color+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE746E5129746B6300E0BEBF /* Color+extension.swift */; };
@@ -41,6 +49,14 @@
 /* Begin PBXFileReference section */
 		EE44A07F297470F1000A9E8F /* NameSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameSpace.swift; sourceTree = "<group>"; };
 		EE44A0812974714E000A9E8F /* NameSpace+Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NameSpace+Text.swift"; sourceTree = "<group>"; };
+		EE44A084297475A8000A9E8F /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		EE44A08629747606000A9E8F /* RequestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestService.swift; sourceTree = "<group>"; };
+		EE44A08829747626000A9E8F /* EndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoints.swift; sourceTree = "<group>"; };
+		EE44A08A2974773F000A9E8F /* ServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
+		EE44A08C29747B23000A9E8F /* ServiceUrl.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ServiceUrl.plist; sourceTree = "<group>"; };
+		EE44A08F29747C3F000A9E8F /* BurguerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurguerModel.swift; sourceTree = "<group>"; };
+		EE44A09229747F41000A9E8F /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		EE44A09429748088000A9E8F /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		EE746E4C2974605200E0BEBF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		EE746E4D2974605200E0BEBF /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		EE746E5129746B6300E0BEBF /* Color+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+extension.swift"; sourceTree = "<group>"; };
@@ -82,9 +98,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EE44A08329747447000A9E8F /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				EE44A084297475A8000A9E8F /* Network.swift */,
+				EE44A08629747606000A9E8F /* RequestService.swift */,
+				EE44A08829747626000A9E8F /* EndPoints.swift */,
+				EE44A08A2974773F000A9E8F /* ServiceError.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		EE44A08E29747C12000A9E8F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EE44A08F29747C3F000A9E8F /* BurguerModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EE44A09129747F2B000A9E8F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EE44A09229747F41000A9E8F /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		EE746E492974601C00E0BEBF /* Modulo */ = {
 			isa = PBXGroup;
 			children = (
+				EE44A09129747F2B000A9E8F /* ViewModel */,
+				EE44A08E29747C12000A9E8F /* Model */,
 				EE746E4B2974603600E0BEBF /* View */,
 			);
 			path = Modulo;
@@ -105,6 +150,7 @@
 				EE746E5129746B6300E0BEBF /* Color+extension.swift */,
 				EE44A07F297470F1000A9E8F /* NameSpace.swift */,
 				EE44A0812974714E000A9E8F /* NameSpace+Text.swift */,
+				EE44A09429748088000A9E8F /* Observable.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -132,12 +178,14 @@
 		EEF75E8129743F520062FD82 /* Lucky-Test-burguer */ = {
 			isa = PBXGroup;
 			children = (
+				EE44A08329747447000A9E8F /* Network */,
 				EE746E5029746B3D00E0BEBF /* Helper */,
 				EE746E492974601C00E0BEBF /* Modulo */,
 				EEF75E8229743F520062FD82 /* AppDelegate.swift */,
 				EEF75E8429743F520062FD82 /* SceneDelegate.swift */,
 				EEF75E8B29743F560062FD82 /* Assets.xcassets */,
 				EEF75E8D29743F560062FD82 /* LaunchScreen.storyboard */,
+				EE44A08C29747B23000A9E8F /* ServiceUrl.plist */,
 				EEF75E9029743F560062FD82 /* Info.plist */,
 			);
 			path = "Lucky-Test-burguer";
@@ -266,6 +314,7 @@
 			files = (
 				EEF75E8F29743F560062FD82 /* LaunchScreen.storyboard in Resources */,
 				EEF75E8C29743F560062FD82 /* Assets.xcassets in Resources */,
+				EE44A08D29747B23000A9E8F /* ServiceUrl.plist in Resources */,
 				EE746E4F2974605200E0BEBF /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,12 +340,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE44A09529748088000A9E8F /* Observable.swift in Sources */,
+				EE44A08B2974773F000A9E8F /* ServiceError.swift in Sources */,
 				EE44A0822974714E000A9E8F /* NameSpace+Text.swift in Sources */,
+				EE44A08929747626000A9E8F /* EndPoints.swift in Sources */,
+				EE44A08729747606000A9E8F /* RequestService.swift in Sources */,
 				EEF75E8329743F520062FD82 /* AppDelegate.swift in Sources */,
 				EEF75E8529743F520062FD82 /* SceneDelegate.swift in Sources */,
 				EE746E4E2974605200E0BEBF /* HomeViewController.swift in Sources */,
+				EE44A09329747F41000A9E8F /* HomeViewModel.swift in Sources */,
 				EE44A080297470F1000A9E8F /* NameSpace.swift in Sources */,
+				EE44A085297475A8000A9E8F /* Network.swift in Sources */,
 				EE746E5229746B6300E0BEBF /* Color+extension.swift in Sources */,
+				EE44A09029747C3F000A9E8F /* BurguerModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
