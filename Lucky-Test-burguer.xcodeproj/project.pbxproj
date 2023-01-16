@@ -7,9 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE11B08229751C24004125F1 /* DetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE11B08129751C24004125F1 /* DetailModel.swift */; };
 		EE1BF5222974A3C50028906B /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1BF5212974A3C50028906B /* HeaderView.swift */; };
 		EE1BF5262974B5600028906B /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1BF5252974B5600028906B /* Enum.swift */; };
 		EE1BF5282974DE080028906B /* image+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1BF5272974DE080028906B /* image+extension.swift */; };
+		EE1BF52A2974EFF60028906B /* NameSpace+Values.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1BF5292974EFF60028906B /* NameSpace+Values.swift */; };
+		EE1BF52F2974F3530028906B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1BF52D2974F3530028906B /* DetailViewController.swift */; };
+		EE1BF5302974F3530028906B /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE1BF52E2974F3530028906B /* DetailViewController.xib */; };
 		EE44A080297470F1000A9E8F /* NameSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE44A07F297470F1000A9E8F /* NameSpace.swift */; };
 		EE44A0822974714E000A9E8F /* NameSpace+Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE44A0812974714E000A9E8F /* NameSpace+Text.swift */; };
 		EE44A085297475A8000A9E8F /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE44A084297475A8000A9E8F /* Network.swift */; };
@@ -22,6 +26,7 @@
 		EE44A09529748088000A9E8F /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE44A09429748088000A9E8F /* Observable.swift */; };
 		EE44A09A29748CE9000A9E8F /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE44A09829748CE9000A9E8F /* ListCell.swift */; };
 		EE44A09B29748CE9000A9E8F /* ListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE44A09929748CE9000A9E8F /* ListCell.xib */; };
+		EE515F032975F6FC00DDC776 /* Helper+Double+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE515F022975F6FC00DDC776 /* Helper+Double+extension.swift */; };
 		EE746E4E2974605200E0BEBF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE746E4C2974605200E0BEBF /* HomeViewController.swift */; };
 		EE746E4F2974605200E0BEBF /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE746E4D2974605200E0BEBF /* HomeViewController.xib */; };
 		EE746E5229746B6300E0BEBF /* Color+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE746E5129746B6300E0BEBF /* Color+extension.swift */; };
@@ -52,9 +57,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EE11B08129751C24004125F1 /* DetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailModel.swift; sourceTree = "<group>"; };
 		EE1BF5212974A3C50028906B /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		EE1BF5252974B5600028906B /* Enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enum.swift; sourceTree = "<group>"; };
 		EE1BF5272974DE080028906B /* image+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "image+extension.swift"; sourceTree = "<group>"; };
+		EE1BF5292974EFF60028906B /* NameSpace+Values.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NameSpace+Values.swift"; sourceTree = "<group>"; };
+		EE1BF52D2974F3530028906B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		EE1BF52E2974F3530028906B /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		EE44A07F297470F1000A9E8F /* NameSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameSpace.swift; sourceTree = "<group>"; };
 		EE44A0812974714E000A9E8F /* NameSpace+Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NameSpace+Text.swift"; sourceTree = "<group>"; };
 		EE44A084297475A8000A9E8F /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
@@ -67,6 +76,7 @@
 		EE44A09429748088000A9E8F /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		EE44A09829748CE9000A9E8F /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
 		EE44A09929748CE9000A9E8F /* ListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListCell.xib; sourceTree = "<group>"; };
+		EE515F022975F6FC00DDC776 /* Helper+Double+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Helper+Double+extension.swift"; sourceTree = "<group>"; };
 		EE746E4C2974605200E0BEBF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		EE746E4D2974605200E0BEBF /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		EE746E5129746B6300E0BEBF /* Color+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+extension.swift"; sourceTree = "<group>"; };
@@ -108,12 +118,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EE11B08029751C14004125F1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EE11B08129751C24004125F1 /* DetailModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		EE1BF51E2974A36C0028906B /* Headers */ = {
 			isa = PBXGroup;
 			children = (
 				EE1BF5212974A3C50028906B /* HeaderView.swift */,
 			);
 			path = Headers;
+			sourceTree = "<group>";
+		};
+		EE1BF52B2974F30B0028906B /* DetailList */ = {
+			isa = PBXGroup;
+			children = (
+				EE11B08029751C14004125F1 /* Model */,
+				EE1BF52C2974F3190028906B /* View */,
+			);
+			path = DetailList;
+			sourceTree = "<group>";
+		};
+		EE1BF52C2974F3190028906B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EE1BF52D2974F3530028906B /* DetailViewController.swift */,
+				EE1BF52E2974F3530028906B /* DetailViewController.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		EE44A08329747447000A9E8F /* Network */ = {
@@ -165,6 +201,7 @@
 		EE746E492974601C00E0BEBF /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				EE1BF52B2974F30B0028906B /* DetailList */,
 				EE44A09629748C68000A9E8F /* Home */,
 			);
 			path = Module;
@@ -187,9 +224,11 @@
 				EE746E5129746B6300E0BEBF /* Color+extension.swift */,
 				EE44A07F297470F1000A9E8F /* NameSpace.swift */,
 				EE44A0812974714E000A9E8F /* NameSpace+Text.swift */,
+				EE1BF5292974EFF60028906B /* NameSpace+Values.swift */,
 				EE44A09429748088000A9E8F /* Observable.swift */,
 				EE1BF5252974B5600028906B /* Enum.swift */,
 				EE1BF5272974DE080028906B /* image+extension.swift */,
+				EE515F022975F6FC00DDC776 /* Helper+Double+extension.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -352,6 +391,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EEF75E8F29743F560062FD82 /* LaunchScreen.storyboard in Resources */,
+				EE1BF5302974F3530028906B /* DetailViewController.xib in Resources */,
 				EEF75E8C29743F560062FD82 /* Assets.xcassets in Resources */,
 				EE44A08D29747B23000A9E8F /* ServiceUrl.plist in Resources */,
 				EE746E4F2974605200E0BEBF /* HomeViewController.xib in Resources */,
@@ -388,15 +428,19 @@
 				EE44A08729747606000A9E8F /* RequestService.swift in Sources */,
 				EEF75E8329743F520062FD82 /* AppDelegate.swift in Sources */,
 				EEF75E8529743F520062FD82 /* SceneDelegate.swift in Sources */,
+				EE515F032975F6FC00DDC776 /* Helper+Double+extension.swift in Sources */,
 				EE746E4E2974605200E0BEBF /* HomeViewController.swift in Sources */,
 				EE44A09329747F41000A9E8F /* HomeViewModel.swift in Sources */,
+				EE1BF52F2974F3530028906B /* DetailViewController.swift in Sources */,
 				EE1BF5262974B5600028906B /* Enum.swift in Sources */,
 				EE1BF5222974A3C50028906B /* HeaderView.swift in Sources */,
 				EE1BF5282974DE080028906B /* image+extension.swift in Sources */,
 				EE44A080297470F1000A9E8F /* NameSpace.swift in Sources */,
 				EE44A085297475A8000A9E8F /* Network.swift in Sources */,
+				EE11B08229751C24004125F1 /* DetailModel.swift in Sources */,
 				EE746E5229746B6300E0BEBF /* Color+extension.swift in Sources */,
 				EE44A09029747C3F000A9E8F /* BurguerModel.swift in Sources */,
+				EE1BF52A2974EFF60028906B /* NameSpace+Values.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

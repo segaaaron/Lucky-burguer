@@ -45,7 +45,7 @@ final class HeaderView: UIView {
         addSubview(titleLabel)
         
         let offert = offertValue ?? 0
-        topConstrain = titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: offert == 0 ? 0 : 15)
+        topConstrain = titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: offert == 0 ? 0 : 5)
         topConstrain?.isActive = true
         NSLayoutConstraint.activate([
             titleLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 20),

@@ -17,8 +17,9 @@ extension Namespace {
     
     /// The Text enum allows to define texts used through the app.
     enum Text {
-        /// App common title. Value is `Title`.
-        static let hometitle = "Title"
+        static let hometitle = "Home"
         static let cellIdentifier = "ListCell"
+        static let nibHome = "HomeViewController"
+        static let headerHomeTitle = "offers"
     }
 }

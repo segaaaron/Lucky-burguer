@@ -96,7 +96,7 @@ final class Network: NetworkProtocol {
 }
 
 final class ServicePath: NSObject {
-    class func pathMainUrl(_ key: String) -> String? {
+    static func pathMainUrl(_ key: String) -> String? {
         let bundle = Bundle.main
         guard let path = bundle.path(forResource: "ServiceUrl", ofType: "plist"),
               let url = NSDictionary(contentsOfFile: path) else { return nil }
