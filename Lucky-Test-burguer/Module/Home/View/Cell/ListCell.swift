@@ -13,7 +13,7 @@ final class ListCell: UITableViewCell {
     
     @IBOutlet weak var brandLabel: UILabel! {
         didSet {
-            brandLabel.font = UIFont.systemFont(ofSize: 10, weight: UIFont.Weight.medium)
+            brandLabel.font = UIFont.systemFont(ofSize: 10, weight: UIFont.Weight.light)
             brandLabel.textColor = UIColor.grayText
         }
     }
@@ -24,7 +24,7 @@ final class ListCell: UITableViewCell {
     }
     @IBOutlet weak var favoriteCountLabel: UILabel! {
         didSet {
-            favoriteCountLabel.font = UIFont.systemFont(ofSize: 10, weight: UIFont.Weight.medium)
+            favoriteCountLabel.font = UIFont.systemFont(ofSize: 10, weight: UIFont.Weight.light)
             favoriteCountLabel.textColor = UIColor.grayText
         }
     }
@@ -57,11 +57,11 @@ final class ListCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    func config(model: Item) {
+    func config(model: Item, counterLikes: String) {
         brandLabel.text = model.brand?.uppercased()
         titleLabel.text = model.title
         tagLabel.text = model.tags
-        favoriteCountLabel.text = "\(model.favoriteCount ?? 0)"
+        favoriteCountLabel.text = counterLikes
         
         if let currentImage = model.imageURL {
             mainImage.asyncImage(with: currentImage, name: currentImage)

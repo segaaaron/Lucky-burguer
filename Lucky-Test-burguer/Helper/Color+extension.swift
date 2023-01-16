@@ -11,6 +11,10 @@ extension UIColor {
     
     //MARK: CUSTOM COLOR TEXT
     
+    static var grayScale: UIColor {
+        return hexStringToUIColor(hex: "#9DB0BD")
+    }
+    
     static var blackText: UIColor {
         return hexStringToUIColor(hex: "#222D34")
     }

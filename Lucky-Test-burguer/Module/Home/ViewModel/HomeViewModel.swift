@@ -11,16 +11,32 @@ final class HomeViewModel: NSObject {
     private let service = Network()
     var filterResult: Observable<BurguerModel> = Observable(BurguerModel(title: "", sections: []))
     
-    
-    var nameCell: String {
-        Text.cellIdentifier
-    }
-    
     var countSectionList: Int {
         if let count = filterResult.value?.sections?.count {
             return count
         }
         return 0
+    }
+    
+    var validateList: Bool {
+        if let title = filterResult.value?.title,
+           let sections = filterResult.value?.sections {
+           return !title.isEmpty && !sections.isEmpty
+        }
+        return false
+    }
+    
+    var counterOfferts: Int {
+        var counter = 0
+        if let sections = filterResult.value?.sections {
+            sections.forEach({ counter += $0.items?.count ?? 0 })
+            return counter
+        }
+        return counter
+    }
+    
+    func currentLikeValue(value: Double) -> String {
+         return Utilities().convertLikes(num: value)
     }
     
     func titleSection(index: Int) -> Section {
@@ -31,8 +47,8 @@ final class HomeViewModel: NSObject {
     }
     
     func titleItemSection(section: Int, index: Int) -> Item {
-        if let model = filterResult.value?.sections?[section].items?[index] {
-            return model
+        if let currentItem = filterResult.value?.sections?[section].items?[index] {
+            return currentItem
         }
         return Item()
     }
