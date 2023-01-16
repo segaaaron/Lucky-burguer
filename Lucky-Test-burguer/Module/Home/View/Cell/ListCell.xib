@@ -25,7 +25,7 @@
                         </constraints>
                     </imageView>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dFe-qW-hQk">
-                        <rect key="frame" x="140" y="5" width="237" height="89"/>
+                        <rect key="frame" x="140" y="15" width="237" height="69"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qJR-e8-mvJ">
                                 <rect key="frame" x="0.0" y="0.0" width="237" height="8.6666666666666661"/>
@@ -57,15 +57,15 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rtJ-rf-jXq">
-                                <rect key="frame" x="0.0" y="16.666666666666668" width="237" height="52.333333333333329"/>
+                                <rect key="frame" x="0.0" y="16.666666666666668" width="237" height="32.333333333333329"/>
                                 <string key="text">3,5% Cashbacks
 Paying with lucky</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Cashback" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="01b-P6-crr">
-                                <rect key="frame" x="0.0" y="77" width="237" height="12"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Cashback" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="01b-P6-crr">
+                                <rect key="frame" x="0.0" y="57" width="237" height="12"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -78,8 +78,7 @@ Paying with lucky</string>
                     <constraint firstAttribute="trailing" secondItem="dFe-qW-hQk" secondAttribute="trailing" constant="20" id="Q2B-Dd-VYL"/>
                     <constraint firstItem="Fuz-xC-h0K" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="W1u-Pv-2ED"/>
                     <constraint firstItem="dFe-qW-hQk" firstAttribute="centerY" secondItem="Fuz-xC-h0K" secondAttribute="centerY" id="bdq-vj-TrP"/>
-                    <constraint firstAttribute="bottom" secondItem="dFe-qW-hQk" secondAttribute="bottom" constant="5" id="rVr-zw-Pnl"/>
-                    <constraint firstItem="dFe-qW-hQk" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="rc6-aI-zC1"/>
+                    <constraint firstAttribute="bottom" secondItem="dFe-qW-hQk" secondAttribute="bottom" constant="15" id="rVr-zw-Pnl"/>
                     <constraint firstItem="dFe-qW-hQk" firstAttribute="leading" secondItem="Fuz-xC-h0K" secondAttribute="trailing" constant="15" id="rjP-LX-uvc"/>
                 </constraints>
             </tableViewCellContentView>
@@ -92,7 +91,7 @@ Paying with lucky</string>
                 <outlet property="tagLabel" destination="01b-P6-crr" id="9Hd-6k-Kdv"/>
                 <outlet property="titleLabel" destination="rtJ-rf-jXq" id="2gB-eJ-rvk"/>
             </connections>
-            <point key="canvasLocation" x="104.58015267175573" y="37.676056338028168"/>
+            <point key="canvasLocation" x="104.58015267175573" y="36.971830985915496"/>
         </tableViewCell>
     </objects>
     <resources>
