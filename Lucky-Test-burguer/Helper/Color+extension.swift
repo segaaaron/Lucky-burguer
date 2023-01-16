@@ -15,6 +15,10 @@ extension UIColor {
         return hexStringToUIColor(hex: "#222D34")
     }
     
+    static var grayText: UIColor {
+        return hexStringToUIColor(hex: "#718897")
+    }
+    
     //MARK: Custom with Hex Color
     static var grayColor: UIColor {
         return grayCustomColor()
