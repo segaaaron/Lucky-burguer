@@ -44,7 +44,13 @@ final class HomeViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
+        let header = HeaderView(sizeTitle: 14.0, colorText: .grayText ,title: "offers", titleType: .MEDIUM, offertValue: 124, frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 40))
+        tableView.tableHeaderView = header
+        
         tableView.register(UINib(nibName: viewModel.nameCell, bundle: nil), forCellReuseIdentifier: viewModel.nameCell)
+        
+        tableView.separatorStyle = .none
+        tableView.showsVerticalScrollIndicator = false
     }
     
     private func loadService() {
@@ -77,32 +83,22 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: viewModel.nameCell, for: indexPath) as? ListCell else {
             return UITableViewCell()
         }
-        
         let model = viewModel.titleItemSection(section: indexPath.section, index: indexPath.row)
         cell.config(model: model)
         return cell
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let container = UIView()
-        let titleSectionLabel = UILabel()
-        titleSectionLabel.translatesAutoresizingMaskIntoConstraints = false
-        
-        container.addSubview(titleSectionLabel)
-        
-        
-        NSLayoutConstraint.activate([
-            titleSectionLabel.leftAnchor.constraint(equalTo: container.leftAnchor, constant: 20),
-            titleSectionLabel.centerXAnchor.constraint(equalTo: container.centerXAnchor)
-        ])
-        
         let model = viewModel.titleSection(index: section)
-        titleSectionLabel.font = UIFont.systemFont(ofSize: 24.0)
-        titleSectionLabel.text = model.title
-        return container
+        let headerView = HeaderView(sizeTitle: 24.0, colorText: .blackText, title: model.title ?? "", titleType: .BOLD, frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 50.0))
+        return headerView
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 50.0
+        return 40.0
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
     }
 }

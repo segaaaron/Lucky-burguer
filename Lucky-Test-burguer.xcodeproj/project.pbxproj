@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE1BF5222974A3C50028906B /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1BF5212974A3C50028906B /* HeaderView.swift */; };
+		EE1BF5262974B5600028906B /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1BF5252974B5600028906B /* Enum.swift */; };
 		EE44A080297470F1000A9E8F /* NameSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE44A07F297470F1000A9E8F /* NameSpace.swift */; };
 		EE44A0822974714E000A9E8F /* NameSpace+Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE44A0812974714E000A9E8F /* NameSpace+Text.swift */; };
 		EE44A085297475A8000A9E8F /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE44A084297475A8000A9E8F /* Network.swift */; };
@@ -49,6 +51,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EE1BF5212974A3C50028906B /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		EE1BF5252974B5600028906B /* Enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enum.swift; sourceTree = "<group>"; };
 		EE44A07F297470F1000A9E8F /* NameSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameSpace.swift; sourceTree = "<group>"; };
 		EE44A0812974714E000A9E8F /* NameSpace+Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NameSpace+Text.swift"; sourceTree = "<group>"; };
 		EE44A084297475A8000A9E8F /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
@@ -102,6 +106,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EE1BF51E2974A36C0028906B /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				EE1BF5212974A3C50028906B /* HeaderView.swift */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
 		EE44A08329747447000A9E8F /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -159,6 +171,7 @@
 		EE746E4B2974603600E0BEBF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				EE1BF51E2974A36C0028906B /* Headers */,
 				EE44A09729748CCE000A9E8F /* Cell */,
 				EE746E4C2974605200E0BEBF /* HomeViewController.swift */,
 				EE746E4D2974605200E0BEBF /* HomeViewController.xib */,
@@ -173,6 +186,7 @@
 				EE44A07F297470F1000A9E8F /* NameSpace.swift */,
 				EE44A0812974714E000A9E8F /* NameSpace+Text.swift */,
 				EE44A09429748088000A9E8F /* Observable.swift */,
+				EE1BF5252974B5600028906B /* Enum.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -373,6 +387,8 @@
 				EEF75E8529743F520062FD82 /* SceneDelegate.swift in Sources */,
 				EE746E4E2974605200E0BEBF /* HomeViewController.swift in Sources */,
 				EE44A09329747F41000A9E8F /* HomeViewModel.swift in Sources */,
+				EE1BF5262974B5600028906B /* Enum.swift in Sources */,
+				EE1BF5222974A3C50028906B /* HeaderView.swift in Sources */,
 				EE44A080297470F1000A9E8F /* NameSpace.swift in Sources */,
 				EE44A085297475A8000A9E8F /* Network.swift in Sources */,
 				EE746E5229746B6300E0BEBF /* Color+extension.swift in Sources */,

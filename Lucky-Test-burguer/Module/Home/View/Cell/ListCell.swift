@@ -7,13 +7,51 @@
 
 import UIKit
 
-class ListCell: UITableViewCell {
+final class ListCell: UITableViewCell {
 
-    @IBOutlet weak var nameLabel: UILabel!
-
+    //MARK: Cell Outlets
+    
+    @IBOutlet weak var brandLabel: UILabel! {
+        didSet {
+            brandLabel.font = UIFont.systemFont(ofSize: 10, weight: UIFont.Weight.medium)
+            brandLabel.textColor = UIColor.grayText
+        }
+    }
+    @IBOutlet weak var smallImage: UIImageView! {
+        didSet {
+            smallImage.image = UIImage(named: "small_heart")
+        }
+    }
+    @IBOutlet weak var favoriteCountLabel: UILabel! {
+        didSet {
+            favoriteCountLabel.font = UIFont.systemFont(ofSize: 10, weight: UIFont.Weight.medium)
+            favoriteCountLabel.textColor = UIColor.grayText
+        }
+    }
+    @IBOutlet weak var titleLabel: UILabel! {
+        didSet {
+            titleLabel.font = UIFont.systemFont(ofSize: 16, weight: UIFont.Weight.bold)
+            titleLabel.textColor = UIColor.blackText
+        }
+    }
+    @IBOutlet weak var tagLabel: UILabel! {
+        didSet {
+            tagLabel.font = UIFont.systemFont(ofSize: 10, weight: UIFont.Weight.medium)
+            tagLabel.textColor = UIColor.grayText
+        }
+    }
+    
+    @IBOutlet weak var mainImage: UIImageView! {
+        didSet {
+            mainImage.image = UIImage(named: "default_image")
+            mainImage.contentMode = .scaleAspectFit
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        titleLabel.numberOfLines = 0
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -21,6 +59,9 @@ class ListCell: UITableViewCell {
     }
     
     func config(model: Item) {
-        nameLabel.text = model.title
+        brandLabel.text = model.brand?.uppercased()
+        titleLabel.text = model.title
+        tagLabel.text = model.tags
+        favoriteCountLabel.text = "\(model.favoriteCount ?? 0)"
     }
 }

@@ -10,31 +10,93 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="ListCell" customModule="Lucky_Test_burguer" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ListCell" rowHeight="99" id="KGk-i7-Jjw" customClass="ListCell" customModule="Lucky_Test_burguer" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="397" height="99"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <rect key="frame" x="0.0" y="0.0" width="397" height="99"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wqj-Or-bxz">
-                        <rect key="frame" x="20" y="11.666666666666664" width="280" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default_image" translatesAutoresizingMaskIntoConstraints="NO" id="Fuz-xC-h0K">
+                        <rect key="frame" x="5" y="9.6666666666666643" width="120" height="80"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="120" id="4RU-ln-KQW"/>
+                            <constraint firstAttribute="height" constant="80" id="dpx-do-fh3"/>
+                        </constraints>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dFe-qW-hQk">
+                        <rect key="frame" x="140" y="5" width="237" height="89"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qJR-e8-mvJ">
+                                <rect key="frame" x="0.0" y="0.0" width="237" height="8.6666666666666661"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Burger Joint" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hBE-Ds-Lt1">
+                                        <rect key="frame" x="0.0" y="0.0" width="200.33333333333334" height="8.6666666666666661"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ye2-JZ-FHZ">
+                                        <rect key="frame" x="200.33333333333331" y="0.0" width="36.666666666666657" height="8.6666666666666661"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="small_heart" translatesAutoresizingMaskIntoConstraints="NO" id="QIY-zw-eMm">
+                                                <rect key="frame" x="0.0" y="0.0" width="8.3333333333333339" height="8.6666666666666661"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="8.5" id="37Q-AF-MEV"/>
+                                                    <constraint firstAttribute="height" constant="8.5" id="uRr-yh-t9l"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1,5K" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ss5-uw-Rds">
+                                                <rect key="frame" x="16.333333333333371" y="0.0" width="20.333333333333329" height="8.6666666666666661"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rtJ-rf-jXq">
+                                <rect key="frame" x="0.0" y="16.666666666666668" width="237" height="52.333333333333329"/>
+                                <string key="text">3,5% Cashbacks
+Paying with lucky</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Cashback" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="01b-P6-crr">
+                                <rect key="frame" x="0.0" y="77" width="237" height="12"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="wqj-Or-bxz" secondAttribute="trailing" constant="20" id="6YI-YH-hKM"/>
-                    <constraint firstItem="wqj-Or-bxz" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Xe1-vo-dYj"/>
-                    <constraint firstItem="wqj-Or-bxz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="vk4-VB-EHa"/>
+                    <constraint firstItem="Fuz-xC-h0K" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="1am-Ha-Kfr"/>
+                    <constraint firstAttribute="trailing" secondItem="dFe-qW-hQk" secondAttribute="trailing" constant="20" id="Q2B-Dd-VYL"/>
+                    <constraint firstItem="Fuz-xC-h0K" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="W1u-Pv-2ED"/>
+                    <constraint firstItem="dFe-qW-hQk" firstAttribute="centerY" secondItem="Fuz-xC-h0K" secondAttribute="centerY" id="bdq-vj-TrP"/>
+                    <constraint firstAttribute="bottom" secondItem="dFe-qW-hQk" secondAttribute="bottom" constant="5" id="rVr-zw-Pnl"/>
+                    <constraint firstItem="dFe-qW-hQk" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="rc6-aI-zC1"/>
+                    <constraint firstItem="dFe-qW-hQk" firstAttribute="leading" secondItem="Fuz-xC-h0K" secondAttribute="trailing" constant="15" id="rjP-LX-uvc"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="nameLabel" destination="wqj-Or-bxz" id="c4S-rB-s9B"/>
+                <outlet property="brandLabel" destination="hBE-Ds-Lt1" id="tHX-Gu-X79"/>
+                <outlet property="favoriteCountLabel" destination="Ss5-uw-Rds" id="JHo-Pv-fSD"/>
+                <outlet property="mainImage" destination="Fuz-xC-h0K" id="DpF-aX-BI3"/>
+                <outlet property="smallImage" destination="QIY-zw-eMm" id="YTd-Oq-Hvx"/>
+                <outlet property="tagLabel" destination="01b-P6-crr" id="9Hd-6k-Kdv"/>
+                <outlet property="titleLabel" destination="rtJ-rf-jXq" id="2gB-eJ-rvk"/>
             </connections>
-            <point key="canvasLocation" x="46" y="21"/>
+            <point key="canvasLocation" x="104.58015267175573" y="37.676056338028168"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="default_image" width="24" height="23"/>
+        <image name="small_heart" width="9" height="9"/>
+    </resources>
 </document>
