@@ -84,6 +84,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             return UITableViewCell()
         }
         let model = viewModel.titleItemSection(section: indexPath.section, index: indexPath.row)
+        cell.selectionStyle = .none
         cell.config(model: model)
         return cell
     }

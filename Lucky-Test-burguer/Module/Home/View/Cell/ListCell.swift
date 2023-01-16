@@ -50,7 +50,6 @@ final class ListCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
         titleLabel.numberOfLines = 0
     }
 
@@ -63,5 +62,11 @@ final class ListCell: UITableViewCell {
         titleLabel.text = model.title
         tagLabel.text = model.tags
         favoriteCountLabel.text = "\(model.favoriteCount ?? 0)"
+        
+        if let currentImage = model.imageURL {
+            mainImage.asyncImage(with: currentImage, name: currentImage)
+        } else {
+            mainImage.image = UIImage(named: "default_image")
+        }
     }
 }
