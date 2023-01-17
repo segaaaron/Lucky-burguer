@@ -18,3 +18,13 @@ struct DetailModel {
     let expDate: String?
     let timesRdemtions: String?
 }
+
+struct SectionSearch {
+    let title: String?
+    let items: [Item]?
+    
+    init(title: String? = nil, items: [Item]? = nil) {
+        self.title = title
+        self.items = items
+    }
+}

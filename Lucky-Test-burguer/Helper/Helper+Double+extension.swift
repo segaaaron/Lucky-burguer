@@ -30,6 +30,31 @@ final class Utilities {
             return ("\(num)")
         }
     }
+    
+    func GSFRemoteJson<T: Decodable>(model: T.Type, pathFile: String) -> T? {
+        let jsonModel: T?
+        guard let pathFile = ServicePath.pathMainUrl(pathFile),
+              let data = pathFile.data(using: .utf8)
+        else {  return nil }
+        do {
+            jsonModel = try JSONDecoder().decode(T.self, from: data)
+        } catch {
+            return nil
+        }
+        return jsonModel
+    }
+    
+    func formatDate(with formatStringDate: String) -> String {
+        let dateFormatterGet = DateFormatter()
+        dateFormatterGet.dateFormat = "yyyy-MM-dd HH:mm:ss"
+
+        let dateFormatterPrint = DateFormatter()
+        dateFormatterPrint.dateFormat = "dd MMM yyyy"
+
+        let date: NSDate? = dateFormatterGet.date(from: formatStringDate) as NSDate?
+        let currentDate = dateFormatterPrint.string(from: date as? Date ?? Date())
+        return "Exp." + currentDate
+    }
 }
 
 extension Double {

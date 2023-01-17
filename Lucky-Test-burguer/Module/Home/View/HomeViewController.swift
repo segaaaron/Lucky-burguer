@@ -20,6 +20,8 @@ final class HomeViewController: UIViewController {
         }
     }
     private var dispatch = DispatchQueue.main
+    private var dispatchSearch: DispatchWorkItem?
+    private var searchController = UISearchController(searchResultsController: nil)
     
     init(viewModel: HomeViewModel) {
         self.viewModel = viewModel
@@ -34,8 +36,11 @@ final class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         settingUI()
+        createSearchBarButton()
+        hideKeyboardWhenTappedAround()
         setupTableView()
         loadService()
+        loadDetailList()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -73,6 +78,39 @@ final class HomeViewController: UIViewController {
         }
     }
     
+    private func createSearchBarButton() {
+        let searchButton = UIButton(frame: CGRect(x: CGFloat(Value.defaultValue), y: CGFloat(Value.defaultValue), width: Value.imageDefaultSize, height: Value.imageDefaultSize))
+        
+        let likeButtonImage = UIImage(named: "search_icon")
+        searchButton.setImage(likeButtonImage, for: .normal)
+        
+        searchButton.addTarget(self, action: #selector(searchButtonAction), for: .touchUpInside)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: searchButton)
+    }
+    
+    private func searchAppList(with query: String) {
+        dispatchSearch?.cancel()
+        let fetchList = DispatchWorkItem {
+            DispatchQueue.main.async { [weak self] in
+                guard let self = self else {
+                    return
+                }
+                let searchList = SearchProvider(searchList: self.viewModel.filterSearchList, query: query)
+                searchList.callbackList = { (list, isEmptyList) in
+                    if isEmptyList {
+                        self.counterOffert = Value.defaultValue
+                    }
+                    self.viewModel.filterResult.value = BurguerModel(title: "Offert", sections: list)
+                    self.tableView.reloadData()
+                }
+                searchList.updateView()
+            }
+        }
+        dispatchSearch = fetchList
+        guard let dispatchSearch = dispatchSearch else { return }
+        DispatchQueue.global().asyncAfter(deadline: .now() + .milliseconds(300), execute: dispatchSearch)
+    }
+    
     private func loadService() {
         viewModel.loadService()
         viewModel.filterResult.bind { [weak self] result in
@@ -84,6 +122,19 @@ final class HomeViewController: UIViewController {
                 }
             }
         }
+    }
+    
+    private func loadDetailList() {
+        viewModel.loadDetailMock()
+        viewModel.detailList.bind {_ in }
+    }
+    
+    @objc func searchButtonAction(_ sender: UIButton) {
+        searchController.hidesNavigationBarDuringPresentation = false
+        searchController.searchBar.keyboardType = UIKeyboardType.asciiCapable
+
+        self.searchController.searchResultsUpdater = self
+        present(searchController, animated: false, completion: nil)
     }
 }
 
@@ -102,8 +153,8 @@ extension HomeViewController: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: Text.cellIdentifier, for: indexPath) as? ListCell else {
             return UITableViewCell()
         }
-        let model = viewModel.titleItemSection(section: indexPath.section, index: indexPath.row)
-        let currentFormatLikes = Double(model.favoriteCount ?? 0)
+        let model = viewModel.listSection(section: indexPath.section, index: indexPath.row)
+        let currentFormatLikes = Double(model.favoriteCount ?? Value.defaultValue)
         cell.selectionStyle = .none
         cell.config(model: model, counterLikes: viewModel.currentLikeValue(value: currentFormatLikes))
         return cell
@@ -127,9 +178,17 @@ extension HomeViewController: UITableViewDataSource {
 extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let controller = DetailViewController()
-        let objc = viewModel.filterResult.value?.sections?[indexPath.section].items?[indexPath.row] ?? Item()
-        let currentObjc = DetailModel(urlImage: objc.imageURL, brand: objc.brand, title: objc.title, favoriteCounter: objc.favoriteCount ?? 0, description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pretium aenean pharetra magna ac placerat vestibulum lectus. Dictumst quisque sagittis purus sit amet volutpat consequat mauris. Vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare. Viverra aliquet eget sit amet tellus. Sit amet justo donec enim diam vulputate ut. Vel facilisis volutpat est velit egestas dui id. A scelerisque purus semper eget. Volutpat commodo sed egestas egestas fringilla phasellus. Urna molestie at elementum eu facilisis sed. Velit ut tortor pretium viverra. Sit amet volutpat consequat mauris nunc congue. Accumsan in nisl nisi scelerisque eu. Duis at consectetur lorem donec massa sapien faucibus et.", oldValue: "EGP500", newValue: "EGP700", expDate: "Exp.28 April 2020", timesRdemtions: "REDEMPTIONS CAP: 8 TIMES")
-        controller.descriptionObj = currentObjc
+        let mockservice = viewModel.detailList.value
+        let objc = mockservice?[indexPath.section].items?[indexPath.row] ?? Item()
+        controller.descriptionObj = objc
         navigationController?.pushViewController(controller, animated: true)
+    }
+}
+
+extension HomeViewController: UISearchResultsUpdating, UISearchBarDelegate{
+    func updateSearchResults(for searchController: UISearchController) {
+        if let text = searchController.searchBar.text {
+            searchAppList(with: text)
+        }
     }
 }

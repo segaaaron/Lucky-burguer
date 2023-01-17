@@ -29,12 +29,13 @@ struct Item: Codable {
     let detailURL, imageURL: String?
     let brand, title: String?
     let tags: String?
-    let favoriteCount: Int?
+    let oldValue, newValue, expDate, description: String?
+    let timeRedemptions, favoriteCount: Int?
 
     enum CodingKeys: String, CodingKey {
         case detailURL = "detailUrl"
         case imageURL = "imageUrl"
-        case brand, title, tags, favoriteCount
+        case brand, title, tags, oldValue, newValue, expDate, description, timeRedemptions, favoriteCount
     }
     
     init(detailURL: String? = nil,
@@ -42,12 +43,22 @@ struct Item: Codable {
          brand: String? = nil,
          title: String? = nil,
          tags: String? = nil,
+         oldValue: String? = nil,
+         newValue: String? = nil,
+         expDate: String? = nil,
+         description: String? = nil,
+         timeRedemptions: Int? = nil,
          favoriteCount: Int? = nil) {
         self.detailURL = detailURL
         self.imageURL = imageURL
         self.brand = brand
         self.title = title
         self.tags = tags
+        self.oldValue = oldValue
+        self.newValue = newValue
+        self.expDate = expDate
+        self.description = description
+        self.timeRedemptions = timeRedemptions
         self.favoriteCount = favoriteCount
     }
 }
