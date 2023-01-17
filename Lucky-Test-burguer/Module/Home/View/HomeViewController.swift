@@ -131,7 +131,9 @@ final class HomeViewController: UIViewController {
     }
     
     @objc func searchButtonAction(_ sender: UIButton) {
-        searchAppList(with: " ")
+        if #available(iOS 15.0, *) {} else {
+            searchAppList(with: " ")
+        }
         searchController.hidesNavigationBarDuringPresentation = false
         searchController.searchBar.keyboardType = UIKeyboardType.asciiCapable
 
