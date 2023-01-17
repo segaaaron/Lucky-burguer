@@ -170,7 +170,7 @@ final class DetailViewController: UIViewController {
                            animations: {
                 self.animateImage.isHidden = false
                     self.animateImage.frame = CGRect(x: 0, y: midy, width: 300, height: 50)
-                self.imageHeight?.constant = 100
+                self.imageHeight?.constant = 80
                 self.animateImage.layoutIfNeeded()
             }, completion: { _ in
                 self.animateImage.isHidden = true
