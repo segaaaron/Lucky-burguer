@@ -27,6 +27,7 @@
 		EE44A09A29748CE9000A9E8F /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE44A09829748CE9000A9E8F /* ListCell.swift */; };
 		EE44A09B29748CE9000A9E8F /* ListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE44A09929748CE9000A9E8F /* ListCell.xib */; };
 		EE45D2DF2976DC8A00137ADD /* Controller+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE45D2DE2976DC8A00137ADD /* Controller+extension.swift */; };
+		EE45D2E22977133400137ADD /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE45D2E12977133400137ADD /* DetailViewModel.swift */; };
 		EE515F032975F6FC00DDC776 /* Helper+Double+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE515F022975F6FC00DDC776 /* Helper+Double+extension.swift */; };
 		EE515F052976301A00DDC776 /* SearchProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE515F042976301A00DDC776 /* SearchProvider.swift */; };
 		EE746E4E2974605200E0BEBF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE746E4C2974605200E0BEBF /* HomeViewController.swift */; };
@@ -79,6 +80,7 @@
 		EE44A09829748CE9000A9E8F /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
 		EE44A09929748CE9000A9E8F /* ListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListCell.xib; sourceTree = "<group>"; };
 		EE45D2DE2976DC8A00137ADD /* Controller+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Controller+extension.swift"; sourceTree = "<group>"; };
+		EE45D2E12977133400137ADD /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		EE515F022975F6FC00DDC776 /* Helper+Double+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Helper+Double+extension.swift"; sourceTree = "<group>"; };
 		EE515F042976301A00DDC776 /* SearchProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchProvider.swift; sourceTree = "<group>"; };
 		EE746E4C2974605200E0BEBF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 		EE1BF52B2974F30B0028906B /* DetailList */ = {
 			isa = PBXGroup;
 			children = (
+				EE45D2E02977132300137ADD /* ViewModel */,
 				EE11B08029751C14004125F1 /* Model */,
 				EE1BF52C2974F3190028906B /* View */,
 			);
@@ -200,6 +203,14 @@
 				EE44A09929748CE9000A9E8F /* ListCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		EE45D2E02977132300137ADD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EE45D2E12977133400137ADD /* DetailViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		EE746E492974601C00E0BEBF /* Module */ = {
@@ -433,6 +444,7 @@
 				EE44A08929747626000A9E8F /* EndPoints.swift in Sources */,
 				EE44A08729747606000A9E8F /* RequestService.swift in Sources */,
 				EEF75E8329743F520062FD82 /* AppDelegate.swift in Sources */,
+				EE45D2E22977133400137ADD /* DetailViewModel.swift in Sources */,
 				EEF75E8529743F520062FD82 /* SceneDelegate.swift in Sources */,
 				EE515F032975F6FC00DDC776 /* Helper+Double+extension.swift in Sources */,
 				EE746E4E2974605200E0BEBF /* HomeViewController.swift in Sources */,

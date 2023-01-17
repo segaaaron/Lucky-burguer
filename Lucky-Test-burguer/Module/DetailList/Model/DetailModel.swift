@@ -7,24 +7,41 @@
 
 import Foundation
 
-struct DetailModel {
-    let urlImage: String?
-    let brand: String?
-    let title: String?
-    let favoriteCounter: Int?
-    let description: String?
-    let oldValue: String?
-    let newValue: String?
-    let expDate: String?
-    let timesRdemtions: String?
-}
-
-struct SectionSearch {
-    let title: String?
-    let items: [Item]?
+// MARK: - Item
+struct Item: Codable {
+    let detailURL, imageURL: String?
+    let brand, title: String?
+    let tags: String?
+    let oldValue, newValue, expDate, description: String?
+    let timeRedemptions, favoriteCount: Int?
     
-    init(title: String? = nil, items: [Item]? = nil) {
+    enum CodingKeys: String, CodingKey {
+        case detailURL = "detailUrl"
+        case imageURL = "imageUrl"
+        case brand, title, tags, oldValue, newValue, expDate, description, timeRedemptions, favoriteCount
+    }
+    
+    init(detailURL: String? = nil,
+         imageURL: String? = nil,
+         brand: String? = nil,
+         title: String? = nil,
+         tags: String? = nil,
+         oldValue: String? = nil,
+         newValue: String? = nil,
+         expDate: String? = nil,
+         description: String? = nil,
+         timeRedemptions: Int? = nil,
+         favoriteCount: Int? = nil) {
+        self.detailURL = detailURL
+        self.imageURL = imageURL
+        self.brand = brand
         self.title = title
-        self.items = items
+        self.tags = tags
+        self.oldValue = oldValue
+        self.newValue = newValue
+        self.expDate = expDate
+        self.description = description
+        self.timeRedemptions = timeRedemptions
+        self.favoriteCount = favoriteCount
     }
 }

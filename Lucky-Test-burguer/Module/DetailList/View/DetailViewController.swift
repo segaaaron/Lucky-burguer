@@ -15,6 +15,7 @@ final class DetailViewController: UIViewController {
         }
     }
     
+    @IBOutlet weak var imageContainerView: UIView!
     @IBOutlet weak var foodImage: UIImageView!
     @IBOutlet weak var brandLabel: UILabel! {
         didSet {
@@ -78,13 +79,41 @@ final class DetailViewController: UIViewController {
             redmentionsLabel.numberOfLines = 1
         }
     }
-    var descriptionObj: Item?
+    
+    private var imageHeight: NSLayoutConstraint?
+    private var showImageAnimate: Bool = false {
+        didSet {
+            showAnimateImage(with: showImageAnimate)
+        }
+    }
+    
+    private lazy var animateImage: UIImageView = {
+        let image = UIImageView()
+        image.image = UIImage(named: "white_heart")
+        image.contentMode = .scaleAspectFit
+        image.isHidden = true
+        image.translatesAutoresizingMaskIntoConstraints = false
+        return image
+    }()
+    
+    var viewModel: DetailViewModel
     private var isLike: Bool = false
+    
+    init(viewModel: DetailViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: "DetailViewController", bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        self.viewModel = DetailViewModel()
+        super.init(coder: coder)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         createBarButton()
-        configUI()
+        animateImageSetup()
+        setupObjc()
     }
     
     private func createBarButton() {
@@ -94,8 +123,19 @@ final class DetailViewController: UIViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(customView: likeButton)
     }
     
-    private func configUI() {
-        if let obj = descriptionObj {
+    private func animateImageSetup() {
+        imageContainerView.addSubview(animateImage)
+        imageHeight = animateImage.heightAnchor.constraint(equalToConstant: 50)
+        imageHeight?.isActive = true
+        NSLayoutConstraint.activate([
+            animateImage.centerXAnchor.constraint(equalTo: imageContainerView.centerXAnchor),
+            animateImage.centerYAnchor.constraint(equalTo: imageContainerView.centerYAnchor),
+            animateImage.widthAnchor.constraint(equalToConstant: 300)
+        ])
+    }
+    
+    private func setupObjc() {
+        if let obj = viewModel.detailObjc.value {
             loadObject(model: obj)
         }
     }
@@ -119,9 +159,29 @@ final class DetailViewController: UIViewController {
         }
     }
     
+    private func showAnimateImage(with isShow: Bool) {
+        if isShow {
+            let midx = self.imageContainerView.frame.height/2
+            let midy = self.imageContainerView.frame.width/2
+            self.animateImage.frame = CGRect(x: midx, y: midy, width: 25, height: 25)
+            UIView.animate(withDuration: 2,
+                           delay: 0.5,
+                           options: [.curveEaseInOut],
+                           animations: {
+                self.animateImage.isHidden = false
+                    self.animateImage.frame = CGRect(x: 0, y: midy, width: 300, height: 50)
+                self.imageHeight?.constant = 100
+                self.animateImage.layoutIfNeeded()
+            }, completion: { _ in
+                self.animateImage.isHidden = true
+            })
+        }
+    }
+    
     @objc func likeButtonAction(_ sender: UIButton) {
         isLike = !isLike
         selectSaveCard(with: isLike, button: sender)
+        showImageAnimate = isLike
     }
     
     private func selectSaveCard(with isFavorite: Bool, button: UIButton) {
