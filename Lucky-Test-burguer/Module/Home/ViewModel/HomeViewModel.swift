@@ -10,8 +10,9 @@ import Foundation
 final class HomeViewModel: NSObject {
     private let service = Network()
     var filterResult: Observable<BurguerModel> = Observable(BurguerModel(title: "", sections: []))
-    var filterSearchList: [Section] = []
     var detailList: Observable<[Section]> = Observable([])
+    var filterSearchList: [Section] = []
+    var detailSearchList: [Section] = []
     
     var countSectionList: Int {
         if let count = filterResult.value?.sections?.count {
@@ -64,6 +65,7 @@ final class HomeViewModel: NSObject {
     
     func loadDetailMock() {
         if let json = Utilities().GSFRemoteJson(model: [Section].self, pathFile: "detailBurguer") {
+            detailSearchList = json
             detailList.value = json
         }
     }

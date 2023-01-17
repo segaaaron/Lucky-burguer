@@ -95,12 +95,13 @@ final class HomeViewController: UIViewController {
                 guard let self = self else {
                     return
                 }
-                let searchList = SearchProvider(searchList: self.viewModel.filterSearchList, query: query)
+                let searchList = SearchProvider(searchList: self.viewModel.detailSearchList, query: query)
                 searchList.callbackList = { (list, isEmptyList) in
                     if isEmptyList {
                         self.counterOffert = Value.defaultValue
                     }
                     self.viewModel.filterResult.value = BurguerModel(title: "Offert", sections: list)
+                    self.viewModel.detailList.value = list
                     self.tableView.reloadData()
                 }
                 searchList.updateView()
@@ -130,10 +131,13 @@ final class HomeViewController: UIViewController {
     }
     
     @objc func searchButtonAction(_ sender: UIButton) {
+        if #available(iOS 15.0, *) {} else {
+            searchAppList(with: " ")
+        }
         searchController.hidesNavigationBarDuringPresentation = false
         searchController.searchBar.keyboardType = UIKeyboardType.asciiCapable
 
-        self.searchController.searchResultsUpdater = self
+        self.searchController.searchBar.delegate = self
         present(searchController, animated: false, completion: nil)
     }
 }
@@ -177,16 +181,18 @@ extension HomeViewController: UITableViewDataSource {
 
 extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let controller = DetailViewController()
-        let mockservice = viewModel.detailList.value
-        let objc = mockservice?[indexPath.section].items?[indexPath.row] ?? Item()
-        controller.descriptionObj = objc
+        let detailViewModel = DetailViewModel()
+        let controller = DetailViewController(viewModel: detailViewModel)
+        let mockList = viewModel.detailList.value
+    
+        let objc = mockList?[indexPath.section].items?[indexPath.row] ?? Item()
+        controller.viewModel.detailObjc.value = objc
         navigationController?.pushViewController(controller, animated: true)
     }
 }
 
-extension HomeViewController: UISearchResultsUpdating, UISearchBarDelegate{
-    func updateSearchResults(for searchController: UISearchController) {
+extension HomeViewController: UISearchBarDelegate{
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if let text = searchController.searchBar.text {
             searchAppList(with: text)
         }
