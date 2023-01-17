@@ -78,7 +78,7 @@ final class DetailViewController: UIViewController {
             redmentionsLabel.numberOfLines = 1
         }
     }
-    var descriptionObj: DetailModel?
+    var descriptionObj: Item?
     private var isLike: Bool = false
     
     override func viewDidLoad() {
@@ -100,21 +100,21 @@ final class DetailViewController: UIViewController {
         }
     }
     
-    private func loadObject(model: DetailModel) {
+    private func loadObject(model: Item) {
         let text = model.oldValue ?? ""
         let attributeString: NSMutableAttributedString = NSMutableAttributedString(string: text)
             attributeString.addAttribute(NSAttributedString.Key.strikethroughStyle, value: 1, range: NSRange(location: 0, length: attributeString.length))
         brandLabel.text = model.brand?.uppercased()
-        let currentFavoriteCounter: Double = Double(model.favoriteCounter ?? 0)
+        let currentFavoriteCounter: Double = Double(model.favoriteCount ?? 0)
         favoriteCounterLabel.text = Utilities().convertLikes(num: currentFavoriteCounter)
         titleLabel.text = model.title
         descriptionLabel.text = model.description
         oldPrice.attributedText = attributeString
         newPrice.text = model.newValue
-        expirationDateLabel.text = model.expDate
-        redmentionsLabel.text = model.timesRdemtions
+        expirationDateLabel.text = Utilities().formatDate(with: model.expDate ?? "")
+        redmentionsLabel.text = "REDEMPTIONS CAP: \(model.timeRedemptions ?? 0) TIMES"
         
-        if let currentImage = model.urlImage {
+        if let currentImage = model.imageURL {
             foodImage.asyncImage(with: currentImage, name: currentImage)
         }
     }

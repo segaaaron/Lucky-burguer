@@ -22,5 +22,6 @@ extension Namespace {
         static let headerSize: CGFloat = 40.0
         static let headerCellTitleSize: CGFloat =  24.0
         static let headerCellHeightSize: CGFloat = 50.0
+        static let imageDefaultSize: CGFloat = 25.0
     }
 }

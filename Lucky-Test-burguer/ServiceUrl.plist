@@ -4,5 +4,121 @@
 <dict>
 	<key>url</key>
 	<string>https://my-json-server.typicode.com/mluksenberg/lucky-test/</string>
+	<key>detailBurguer</key>
+	<string>[
+    {
+        &quot;title&quot;: &quot;Top Cashbacks&quot;,
+        &quot;items&quot;: [
+            {
+                &quot;detailUrl&quot;: &quot;https://www.google.com/&quot;,
+                &quot;imageUrl&quot;: &quot;https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1125&amp;h=750&amp;q=80&quot;,
+                &quot;brand&quot;: &quot;Burger Joint&quot;,
+                &quot;title&quot;: &quot;3,5% Cashbacks Paying with Lucky&quot;,
+                &quot;tags&quot;: &quot;Cashback&quot;,
+                &quot;oldValue&quot;: &quot;EGP500&quot;,
+                &quot;newValue&quot;: &quot;EGP700&quot;,
+                &quot;timeRedemptions&quot;: 3,
+                &quot;expDate&quot;: &quot;2023-02-29 12:24:26&quot;,
+                &quot;description&quot;: &quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pretium aenean pharetra magna ac placerat vestibulum lectus. Dictumst quisque sagittis purus sit amet volutpat consequat mauris. Vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare. Viverra aliquet eget sit amet tellus. Sit amet justo donec enim diam vulputate ut. Vel facilisis volutpat est velit egestas dui id. A scelerisque purus semper eget. Volutpat commodo sed egestas egestas fringilla phasellus. Urna molestie at elementum eu facilisis sed. Velit ut tortor pretium viverra. Sit amet volutpat consequat mauris nunc congue. Accumsan in nisl nisi scelerisque eu. Duis at consectetur lorem donec massa sapien faucibus et.&quot;,
+                &quot;favoriteCount&quot;: 283
+            },
+            {
+                &quot;detailUrl&quot;: &quot;https://www.google.com/&quot;,
+                &quot;imageUrl&quot;: &quot;https://images.unsplash.com/photo-1561651823-34feb02250e4?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1125&amp;h=750&amp;q=80&quot;,
+                &quot;brand&quot;: &quot;Shawerma El Reem&quot;,
+                &quot;title&quot;: &quot;4 Sandwiches for 60 EGP Only!&quot;,
+                &quot;tags&quot;: &quot;Discount&quot;,
+                &quot;oldValue&quot;: &quot;EGP100&quot;,
+                &quot;newValue&quot;: &quot;EGP300&quot;,
+                &quot;timeRedemptions&quot;: 9,
+                &quot;expDate&quot;: &quot;2023-01-09 12:24:26&quot;,
+                &quot;description&quot;: &quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pretium aenean pharetra magna ac placerat vestibulum lectus. Dictumst quisque sagittis purus sit amet volutpat consequat mauris. Vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare. Viverra aliquet eget sit amet tellus. Sit amet justo donec enim diam vulputate ut. Vel facilisis volutpat est velit egestas dui id. A scelerisque purus semper eget. Volutpat commodo sed egestas egestas fringilla phasellus. Urna molestie at elementum eu facilisis sed. Velit ut tortor pretium viverra. Sit amet volutpat consequat mauris nunc congue. Accumsan in nisl nisi scelerisque eu. Duis at consectetur lorem donec massa sapien faucibus et. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pretium aenean pharetra magna ac placerat vestibulum lectus. Dictumst quisque sagittis purus sit amet volutpat consequat mauris. Vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare. Viverra aliquet eget sit amet tellus. Sit amet justo donec enim diam vulputate ut. Vel facilisis volutpat est velit egestas dui id. A scelerisque purus semper eget. Volutpat commodo sed egestas egestas fringilla phasellus. Urna molestie at elementum eu facilisis sed. Velit ut tortor pretium viverra. Sit amet volutpat consequat mauris nunc congue. Accumsan in nisl nisi scelerisque eu. Duis at consectetur lorem donec massa sapien faucibus et.&quot;,
+                &quot;favoriteCount&quot;: 1459
+            },
+            {
+                &quot;detailUrl&quot;: &quot;https://www.google.com/&quot;,
+                &quot;imageUrl&quot;: &quot;https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1125&amp;h=750&amp;q=80&quot;,
+                &quot;brand&quot;: &quot;Pizza King&quot;,
+                &quot;title&quot;: &quot;Special Combo for 110 EGP only instead of 211 EGP!&quot;,
+                &quot;tags&quot;: &quot;Discount&quot;,
+                &quot;oldValue&quot;: &quot;EGP900&quot;,
+                &quot;newValue&quot;: &quot;EGP1200&quot;,
+                &quot;timeRedemptions&quot;: 1,
+                &quot;expDate&quot;: &quot;2023-01-29 12:24:26&quot;,
+                &quot;description&quot;: &quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis at consectetur lorem donec massa sapien faucibus et.&quot;,
+                &quot;favoriteCount&quot;: 45
+            },
+            {
+                &quot;detailUrl&quot;: &quot;https://www.google.com/&quot;,
+                &quot;imageUrl&quot;: &quot;https://images.unsplash.com/photo-1510157059722-9c3c2175ed1f?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1125&amp;h=750&amp;q=80&quot;,
+                &quot;brand&quot;: &quot;Bose&quot;,
+                &quot;title&quot;: &quot;5% Cashbacks Paying with Lucky&quot;,
+                &quot;tags&quot;: &quot;Cashback&quot;,
+                &quot;oldValue&quot;: &quot;EGP170&quot;,
+                &quot;newValue&quot;: &quot;EGP514&quot;,
+                &quot;timeRedemptions&quot;: 5,
+                &quot;expDate&quot;: &quot;2023-02-02 12:24:26&quot;,
+                &quot;description&quot;: &quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pretium aenean pharetra magna ac placerat vestibulum lectus. Dictumst quisque sagittis purus sit amet volutpat consequat mauris. Vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare. Viverra aliquet eget sit amet tellus. Sit amet justo donec enim diam vulputate ut. Vel facilisis volutpat est velit egestas dui id. A scelerisque purus semper eget. Volutpat commodo sed egestas egestas fringilla phasellus. Urna molestie at elementum eu facilisis sed. Velit ut tortor pretium viverra. Sit amet volutpat consequat mauris nunc congue. Accumsan in nisl nisi scelerisque eu. Duis at consectetur lorem donec massa sapien faucibus et.&quot;,
+                &quot;favoriteCount&quot;: 782
+            }
+        ]
+    },
+    {
+        &quot;title&quot;: &quot;Popular&quot;,
+        &quot;items&quot;: [
+            {
+                &quot;detailUrl&quot;: &quot;https://www.google.com/&quot;,
+                &quot;imageUrl&quot;: &quot;https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1125&amp;h=750&amp;q=80&quot;,
+                &quot;brand&quot;: &quot;Max Burgers&quot;,
+                &quot;title&quot;: &quot;Double max burger or double chicken ranch sandwich for EGP 25&quot;,
+                &quot;tags&quot;: &quot;Discount&quot;,
+                &quot;oldValue&quot;: &quot;EGP320&quot;,
+                &quot;newValue&quot;: &quot;EGP500&quot;,
+                &quot;timeRedemptions&quot;: 2,
+                &quot;expDate&quot;: &quot;2023-02-18 12:24:26&quot;,
+                &quot;description&quot;: &quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pretium aenean pharetra magna ac placerat vestibulum lectus. Dictumst quisque sagittis purus sit amet volutpat consequat mauris. Vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare. Viverra aliquet eget sit amet tellus. Sit amet justo donec enim diam vulputate ut. Vel facilisis volutpat est velit egestas dui id. A scelerisque purus semper eget. Volutpat commodo sed egestas egestas fringilla phasellus. Urna molestie at elementum eu facilisis sed. Velit ut tortor pretium viverra. Sit amet volutpat consequat mauris nunc congue. Accumsan in nisl nisi scelerisque eu. Duis at consectetur lorem donec massa sapien faucibus et.&quot;,
+                &quot;favoriteCount&quot;: 101
+            },
+            {
+                &quot;detailUrl&quot;: &quot;https://www.google.com/&quot;,
+                &quot;imageUrl&quot;: &quot;https://images.unsplash.com/photo-1562967914-01efa7e87832?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1125&amp;h=750&amp;q=80&quot;,
+                &quot;brand&quot;: &quot;Chicken Tikka&quot;,
+                &quot;title&quot;: &quot;Half grilled chicken meal for 57 EGP instead of 92 EGP!!&quot;,
+                &quot;tags&quot;: &quot;Discount&quot;,
+                &quot;oldValue&quot;: &quot;EGP800&quot;,
+                &quot;newValue&quot;: &quot;EGP960&quot;,
+                &quot;timeRedemptions&quot;: 22,
+                &quot;expDate&quot;: &quot;2023-01-31 12:24:26&quot;,
+                &quot;description&quot;: &quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pretium aenean pharetra magna ac placerat vestibulum lectus. Dictumst quisque sagittis purus sit amet volutpat consequat mauris. Vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare. Viverra aliquet eget sit amet tellus. Sit amet justo donec enim diam vulputate ut. Vel facilisis volutpat est velit egestas dui id. A scelerisque purus semper eget. Volutpat commodo sed egestas egestas fringilla phasellus. Urna molestie at elementum eu facilisis sed. Velit ut tortor pretium viverra. Sit amet volutpat consequat mauris nunc congue. Accumsan in nisl nisi scelerisque eu. Duis at consectetur lorem donec massa sapien faucibus et.&quot;,
+                &quot;favoriteCount&quot;: 1459
+            },
+            {
+                &quot;detailUrl&quot;: &quot;https://www.google.com/&quot;,
+                &quot;imageUrl&quot;: &quot;https://images.unsplash.com/photo-1561651823-34feb02250e4?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1125&amp;h=750&amp;q=80&quot;,
+                &quot;brand&quot;: &quot;Shawerma El Reem&quot;,
+                &quot;title&quot;: &quot;Sandwich shawerma beef + 1 shawerma chicken Large for EGP 35 instead of EGP 66!&quot;,
+                &quot;oldValue&quot;: &quot;EGP479&quot;,
+                &quot;newValue&quot;: &quot;EGP836&quot;,
+                &quot;timeRedemptions&quot;: 8,
+                &quot;expDate&quot;: &quot;2023-02-23 12:24:26&quot;,
+                &quot;description&quot;: &quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pretium aenean pharetra magna ac placerat vestibulum lectus. Dictumst quisque sagittis purus sit amet volutpat consequat mauris. Vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare. Viverra aliquet eget sit amet tellus. Sit amet justo donec enim diam vulputate ut. Vel facilisis volutpat est velit egestas dui id. A scelerisque purus semper eget. Volutpat commodo sed egestas egestas fringilla phasellus. Urna molestie at elementum eu facilisis sed. Velit ut tortor pretium viverra. Sit amet volutpat consequat mauris nunc congue. Accumsan in nisl nisi scelerisque eu. Duis at consectetur lorem donec massa sapien faucibus et. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pretium aenean pharetra magna ac placerat vestibulum lectus. Dictumst quisque sagittis purus sit amet volutpat consequat mauris. Vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare. Viverra aliquet eget sit amet tellus. Sit amet justo donec enim diam vulputate ut. Vel facilisis volutpat est velit egestas dui id. A scelerisque purus semper eget. Volutpat commodo sed egestas egestas fringilla phasellus. Urna molestie at elementum eu facilisis sed. Velit ut tortor pretium viverra. Sit amet volutpat consequat mauris nunc congue. Accumsan in nisl nisi scelerisque eu. Duis at consectetur lorem donec massa sapien faucibus et. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pretium aenean pharetra magna ac placerat vestibulum lectus. Dictumst quisque sagittis purus sit amet volutpat consequat mauris. Vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare. Viverra aliquet eget sit amet tellus. Sit amet justo donec enim diam vulputate ut. Vel facilisis volutpat est velit egestas dui id. A scelerisque purus semper eget. Volutpat commodo sed egestas egestas fringilla phasellus. Urna molestie at elementum eu facilisis sed. Velit ut tortor pretium viverra. Sit amet volutpat consequat mauris nunc congue. Accumsan in nisl nisi scelerisque eu. Duis at consectetur lorem donec massa sapien faucibus et.&quot;,
+                &quot;favoriteCount&quot;: 94
+            },
+            {
+                &quot;detailUrl&quot;: &quot;https://www.google.com/&quot;,
+                &quot;imageUrl&quot;: &quot;https://images.unsplash.com/photo-1523329110005-297cf111f8de?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1125&amp;h=750&amp;q=80&quot;,
+                &quot;brand&quot;: &quot;Sony&quot;,
+                &quot;title&quot;: &quot;10% Cashbacks Paying with Lucky today&quot;,
+                &quot;tags&quot;: &quot;Cashback&quot;,
+                &quot;oldValue&quot;: &quot;EGP500&quot;,
+                &quot;newValue&quot;: &quot;EGP800&quot;,
+                &quot;timeRedemptions&quot;: 15,
+                &quot;expDate&quot;: &quot;2023-02-10 12:24:26&quot;,
+                &quot;description&quot;: &quot;Lorem ipsum dolor sit amet, Sit amet volutpat consequat mauris nunc congue. Accumsan in nisl nisi scelerisque eu. Duis at consectetur lorem donec massa sapien faucibus et.&quot;,
+                &quot;favoriteCount&quot;: 623
+            }
+        ]
+    }
+]</string>
 </dict>
 </plist>
