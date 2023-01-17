@@ -131,10 +131,11 @@ final class HomeViewController: UIViewController {
     }
     
     @objc func searchButtonAction(_ sender: UIButton) {
+        searchAppList(with: " ")
         searchController.hidesNavigationBarDuringPresentation = false
         searchController.searchBar.keyboardType = UIKeyboardType.asciiCapable
 
-        self.searchController.searchResultsUpdater = self
+        self.searchController.searchBar.delegate = self
         present(searchController, animated: false, completion: nil)
     }
 }
@@ -188,8 +189,8 @@ extension HomeViewController: UITableViewDelegate {
     }
 }
 
-extension HomeViewController: UISearchResultsUpdating, UISearchBarDelegate{
-    func updateSearchResults(for searchController: UISearchController) {
+extension HomeViewController: UISearchBarDelegate{
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if let text = searchController.searchBar.text {
             searchAppList(with: text)
         }
